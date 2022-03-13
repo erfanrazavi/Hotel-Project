@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Lateef&family=League+Spartan&display=swap');
+/* public style */
+* {
+    padding: 0;
+    margin: 0;box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+body{
+    /* font-family: 'Lateef', cursive; */
+    font-size: 1.25rem;
+    position: relative;
+}
+body::after {
+    content: "";
+    background: url(https://i.pinimg.com/564x/42/66/3a/42663ab87d6be39d77867dd9f959b733.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+
+/* public site parts */
+
+
+/* site > * // */
+
+#backToTop{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(4, 118, 146);
+    /* position: fixed; */
+    z-index: 1500;
+    position: fixed;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  #preloader {
+    position : fixed;
+    width : 100%;
+    height : 100%;
+    background-color: rgb(3, 65, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hotel-site {
+      display : none;
+  }
+
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    }
+    .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+    }
+    .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+    }
+    .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+    }
+    .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+    }
+    @keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.hotel-site {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header-Phone{
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 30px;
+    background: rgb(0,0,0);
+    background: linear-gradient(29deg, rgba(0,0,0,0.9615196420365021) 85%, rgba(223,216,216,0.9054972330729166) 99%);
+    border-radius: 10px;
+    color: white;
+    width: 60%;
+    margin-top: 20px;
+    
+    
+}
+.header-Phone .logo-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-header img{
+    width: 12%;
+}
+.serch-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header-Phone .serch-header-phone[type = text]{
+    font-family: 'Lateef', cursive;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 4px;
+    border-radius: 7px;
+    border: 0px;
+    display: flex;
+    width: 200px;
+    margin-top: -5px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    
+}
+.serch-bar .serch-header-phone[type=text]:focus{
+    border: 1.5px solid #009688;
+    background-color: white;
+    width: 323px ;
+    background-color: rgba(17, 17, 17, 0.897);
+    color: white;
+}
+.serch-bar .button-search-header{
+    padding: 10.5px;
+    border: 0px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: -5px;
+    cursor: pointer;
+    color: #1469d6;
+    background-color: orange;
+}
+
+.nav-hotel-part{
+    margin-top: -10px;
+    background: rgb(223,216,216);
+    background: linear-gradient(29deg, rgba(223,216,216,0.9054972330729166) 2%, rgba(0,0,0,0.9615196420365021) 14%);
+    border-radius: 10px;
+    z-index: 1;
+    
+    
+}
+.nav-hotel-part *{
+    display: flex;
+    flex-direction: row;
+    padding: 11px 30px;
+    color: white;
+    transition:  ease-in-out;
+    
+}
+.nav-hotel-part ul li *:hover{
+    color: rgb(16, 130, 196);
+    transform: scale(.98);
+}
+.nav-hotel-part ul li.active{
+    border-left: 2px solid wheat;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+.nav-hotel-part ul li.active:hover{
+    transform: scale(.98);
+    border-radius: 0;
+}
+.nav-hotel-part ul li.active a{
+    color: rgb(16, 130, 196);
+}
+
+.nav-pic-slider{
+    width: 100%;
+}
+.nav-pic-slider img{
+    width: 100%;
+    height: 500px;
+    
+    border-radius: 5px;
+    margin-top: 0;
+    z-index: 0;
+    transition: .2s ease;
+    
+}
+
+
+.main{
+    width: 100%;
+    background: url(https://i.pinimg.com/564x/c5/7b/2b/c57b2bf14c0205ae864569252724a039.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  
+}
+.main .menu-explantion-top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    color: #fff;
+}
+.main .menu-1-resturant{
+    width: 20%;
+    height: 260px;
+    border: 7px solid rgb(18, 61, 202);
+    border-radius: 50%;
+    text-align: center;
+    padding: 30px;
+    background: url(https://i.pinimg.com/564x/bc/17/2f/bc172f924f1cf68d11827ae98fa61336.jpg);
+    background-position: center ;
+    background-size: cover;
+}
+.main .menu-2-coffe{
+    width: 20%;
+    height: 260px;
+    border: 7px solid rgb(241, 208, 18);
+    border-radius: 50%;
+    text-align: center;
+    padding: 30px;
+    background: url(https://i.pinimg.com/564x/eb/2d/41/eb2d41a965bd2a7dc8f37671efe2c87a.jpg);
+    background-position: center ;
+    background-size: cover;
+}
+.main .menu-3-billiard{
+    width: 20%;
+    height: 260px;
+    border: 7px solid black;
+    border-radius: 50%;
+    text-align: center;
+    padding: 30px;
+    background: url(https://i.pinimg.com/564x/3f/15/7c/3f157c2aebe7802d39f3b6d21e48966f.jpg);
+    background-position: center ;
+    background-size: cover;
+}
+.menu-1-resturant:hover , .menu-2-coffe:hover , .menu-3-billiard:hover  {
+    background-size: 120%;
+}
+.menu-explantion-bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    color: #fff;
+}
+.main .menu-1-recepction{
+    width: 20%;
+    height: 260px;
+    border: 7px solid rgb(44, 158, 16);
+    border-radius: 50%;
+    text-align: center;
+    padding: 30px;
+    margin-left: 160px;
+    background: url(https://i.pinimg.com/564x/74/a7/cb/74a7cb1718358ae70601be79f32e5668.jpg);
+    background-position: center ;
+    background-size: cover;
+    transition: .3s ease-in-out;
+}
+
+.main .menu-2-pool{
+    width: 20%;
+    height: 260px;
+    border: 7px solid rgb(163, 10, 10);
+    border-radius: 50%;
+    text-align: center;
+    padding: 30px;
+    margin-right: 160px;
+    background: url(https://i.pinimg.com/236x/1c/97/bb/1c97bb3d7057e1175540d9d5567f77ca.jpg);
+    background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.menu-1-recepction:hover , .menu-2-pool:hover {
+    background-size: 120%;
+}
+.main h2{
+    text-shadow: 3px 2px 2px black;
+}
+.main h2:hover{
+    font-weight: lighter;
+}
+.pic-Advertise{
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(to bottom , rgba(1,1,1,.7) , rgba(1,1,1,.7) , rgba(1,1,1,.7)),url(https://i.pinimg.com/564x/91/f4/18/91f418cc11e9e0c1292755aec4074008.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 5px;
+    
+}
+.pic-Advertise p{
+    display: flex;
+    font-size: 3rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 155px;
+}
+
+
+.footer{
+    margin-top: 2px;
+    width: 100%;
+    background-color: black;
+    color: rgb(255, 242, 218);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    
+}
+footer a{
+    color: orange ;
+}
+.footer h2{
+    color: orange;
+    margin-bottom: 10px;
+}
+.about-footer{
+    padding: 40px;
+    width: 50%;
+    text-align: justify;
+    line-height: 32px;
+}
+.adress-footer{
+    padding: 40px;
+    width: 50%;
+    text-align: justify;
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-admin{
+    width: 100%;
+    background-color: black;
+    border-top: 1px solid #fff;
+    color: rgb(243, 228, 199);
+}
+.footer-admin img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px 90px;
+    margin-left: 9px;
+}
+.footer-admin .info{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* sliders pic */
+
+.sliders{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    
+}
+.slider{
+    position: relative;
+    display: none;
+    animation: fade .5s linear   ;
+    
+}
+.slider.active{
+    display: block;
+    
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -28px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px 0 0 3px;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+  }
+  .next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(17, 95, 184, 0.8);
+  }
+  
+ 
+
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    40%{
+        animation-duration: 1s;
+     }
+     100%{
+         animation-duration: .3s;
+     }
+  }
+ 
+  
+  @keyframes fade {
+    40%{
+       animation-duration: 1s;
+    }
+    100%{
+        animation-duration: .3s;
+    }
+  }
+
+
+
+
+
+
+
